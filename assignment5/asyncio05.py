@@ -14,7 +14,7 @@ async def rice():
     await asyncio.sleep(value)
 
     # report the value
-    print(f">Menu Rice finish in {value} sec")
+    print(f">Menu Rice finish")
 
 async def noodle():
     # generate a random value between 0 and 1
@@ -26,7 +26,7 @@ async def noodle():
     await asyncio.sleep(value)
 
     # report the value
-    print(f">Menu Noodle finish in {value} sec")
+    print(f">Menu Noodle finish")
 
 async def curry():
     # generate a random value between 0 and 1
@@ -38,7 +38,7 @@ async def curry():
     await asyncio.sleep(value)
 
     # report the value
-    print(f">Menu Curry finish in {value} sec")
+    print(f">Menu Curry finish")
 
 # main coroutine
 async def main():
