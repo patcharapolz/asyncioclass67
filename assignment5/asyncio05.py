@@ -59,7 +59,7 @@ async def main():
 
     first = done.pop()
 
-    print(f"\t{first.get_name()} finish first.")
+    print(f"\t{first.get_name()} is complete.")
     print(f"\nTask Uncomplete: {len(pending)}")
    
 
