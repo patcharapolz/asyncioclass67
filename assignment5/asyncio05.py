@@ -14,7 +14,7 @@ async def task_coro(arg):
     await asyncio.sleep(value)
 
     # report the value
-    print(f">task {food[arg]} done with {value:.2f} sec")
+    print(f">Menu {food[arg]} finish in {value:.2f} sec")
 
 # main coroutine
 async def main():
