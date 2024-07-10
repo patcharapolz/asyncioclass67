@@ -8,14 +8,19 @@ async def rice():
     # generate a random value between 0 and 1
     value = random() + 1
 
+    print(f">Menu Rice cooking {value} sec")
+
     # block for a moment
     await asyncio.sleep(value)
 
     # report the value
     print(f">Menu Rice finish in {value} sec")
+
 async def noodle():
     # generate a random value between 0 and 1
     value = random() + 1
+
+    print(f">Menu Noodle cooking {value} sec")
 
     # block for a moment
     await asyncio.sleep(value)
@@ -26,6 +31,8 @@ async def noodle():
 async def curry():
     # generate a random value between 0 and 1
     value = random() + 1
+
+    print(f">Menu Curry cooking {value} sec")
 
     # block for a moment
     await asyncio.sleep(value)
@@ -46,11 +53,6 @@ async def main():
 
     # wait for all tasks to complete
     done, pending = await asyncio.wait(Menus, return_when = asyncio.FIRST_COMPLETED)
-
-    await makeRice
-    await makeNoodle
-    await makeCurry
-
     # get the first task to complete
     print(f"\nTask Complete: {len(done)}")
     first = done.pop()
