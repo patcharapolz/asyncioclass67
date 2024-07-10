@@ -53,9 +53,12 @@ async def main():
 
     # wait for all tasks to complete
     done, pending = await asyncio.wait(Menus, return_when = asyncio.FIRST_COMPLETED)
+
     # get the first task to complete
     print(f"\nTask Complete: {len(done)}")
+
     first = done.pop()
+
     print(f"\t{first.get_name()} finish first.")
     print(f"\nTask Uncomplete: {len(pending)}")
    
