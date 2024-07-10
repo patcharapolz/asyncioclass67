@@ -27,8 +27,5 @@ async def main():
     # report results
     print("Done")
 
-    # get the first task to complete
-        # first = done
-
 # start the asyncio program
 asyncio.run(main())
