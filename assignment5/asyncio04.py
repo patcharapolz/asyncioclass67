@@ -12,6 +12,7 @@ async def task_coro(arg):
 
     # report the value
     print(f">task {arg} done with {value}")
+    return f"{value} t"
 
 # main coroutine
 async def main():
@@ -20,9 +21,10 @@ async def main():
 
     # wait for all tasks to complete
     done, pending = await asyncio.wait(tasks, timeout = 5)
-
+    result = done.pop()
     # report results
     print(f"Done, {len(done)} tasks completed in time")
+    print(result.result())
 
 # start the asyncio program
 asyncio.run(main())
